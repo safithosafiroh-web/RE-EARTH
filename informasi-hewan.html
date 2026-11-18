@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum RE:EARTH | Welcome </title>
+
+       <!-- Google Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="informasi-hewan.css">
+</head>
+
+
+<script>
+document.addEventListener("click", function(event) {
+    const link = event.target.closest("a[href]");
+
+    if (!link) return;
+
+    if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.metaKey ||
+        link.target === "_blank"
+    ) return;
+
+    const destination = new URL(link.href, location.href);
+
+    if (destination.origin !== location.origin) return;
+
+    if (
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+    ) return;
+
+    event.preventDefault();
+
+    if (document.documentElement.classList.contains("page-leaving")) return;
+
+    document.documentElement.classList.add("page-leaving");
+
+    setTimeout(function() {
+        window.location.href = destination.href;
+    }, 850);
+});
+</script>
+
+<body>
+    
+
+    <!--Navbar-->
+      <nav class="navbar">
+        <a href="index.html" class="logo">RE:EARTH</a>
+       
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="museum-container">
+      <!--MAIN CONTENT-->
+
+      <main class="information-section">
+
+        <!--BACK BUTTON-->
+
+        <a href="alur-gallery3.html" class="back-button">  ← Kembali</a>
+
+        <!--TITLE-->
+
+        <header class="information-header">
+
+            <div class="title-icon">ⓘ</div>
+
+            <h1>Informasi Penting</h1>
+            <p>   Mereka masih hidup di bumi ini, tetapi keberadaannya
+                  semakin terancam. Kehilangan satu spesies berarti
+                  kehilangan bagian penting dari keseimbangan alam.
+            </p>
+        </header>
+
+        <!--TAB NAVIGASI-->
+
+       <div class="information-tabs">
+
+       <button class="tab-button active" data-tab="tentang">
+         Mengenal Satwa
+       </button>
+
+       <button class="tab-button" data-tab="peran">
+        Peran Satwa
+       </button>
+
+      <button class="tab-button" data-tab="ancaman">
+        Ancaman Kepunahan
+      </button>
+
+      </div>
+
+      <div class="tab-viewport">
+    <div class="tab-slider">
+
+        <!-- TAB 1: TENTANG -->
+            <section class="tab-content " id="tentang">
+
+                <div class="content-image">
+                    <img src="images/hewanbadak.jpg"
+                         alt="Keindahan hutan">
+                </div>
+
+                <div class="content-description">
+
+                    <span class="category">01 / MENGENAL SATWA</span>
+
+                    <h2>Ketika Kehidupan Mereka Terancam</h2>
+
+                    <p>
+                       Satwa terancam punah adalah hewan yang menghadapi
+                       risiko tinggi untuk mengalami kepunahan di alam liar.
+                       Jumlah populasinya terus menurun akibat berbagai
+                       tekanan terhadap lingkungan dan aktivitas manusia.
+                    </p>
+
+                    <p>
+                        Di Indonesia, beberapa satwa seperti orangutan,
+                        harimau Sumatra, badak Jawa, dan gajah Sumatra
+                        menghadapi ancaman serius terhadap kelangsungan
+                        hidupnya. Mereka masih ada, tetapi membutuhkan
+                        perlindungan agar tidak benar-benar menghilang
+                        dari bumi.
+                        
+                    </p>
+
+                    <div class="fact-box">
+                        <span>TAHUKAH KAMU?</span>
+                        <p>
+                         Badak Jawa merupakan salah satu mamalia paling
+                        langka di dunia. Populasinya yang tersisa hanya
+                        ditemukan di Taman Nasional Ujung Kulon,
+                        Indonesia.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+              <!-- TAB 2: PERAN -->
+            <section class="tab-content" id="peran">
+
+                <div class="content-image">
+                    <img src="images/peranhewan.jpg"
+                         alt="Ekosistem laut dan terumbu karang">
+                </div>
+
+                <div class="content-description">
+
+                    <span class="category">02 / PERAN DALAM EKOSISTEM</span>
+
+                    <h2>Setiap Satwa Memiliki Perannya</h2>
+                    <p>
+                        Setiap hewan memiliki fungsi tersendiri dalam
+                        menjaga keseimbangan ekosistem. Kehilangan satu
+                        spesies dapat memengaruhi hubungan antara makhluk
+                        hidup dan mengganggu rantai kehidupan di alam.
+                    </p>
+
+                    <div class="role-list">
+
+                        <div class="role-item">
+                            <span>01</span>
+                            <div>
+                                <h3>Menjaga Rantai Makanan</h3>
+                                <p>
+                                     Predator dan mangsa membantu mengendalikan
+                                    populasi sehingga keseimbangan ekosistem
+                                    tetap terjaga.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="role-item">
+                            <span>02</span>
+                            <div>
+                                <h3>Menyebarkan Biji Tanaman</h3>
+                                <p>
+                                    Hewan pemakan buah seperti orangutan
+                                    membantu menyebarkan biji dan mendukung
+                                    regenerasi hutan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="role-item">
+                            <span>03</span>
+                            <div>
+                                <h3>Menjaga Keanekaragaman Hayati</h3>
+                                <p>
+                                    Setiap spesies berkontribusi dalam
+                                    mempertahankan keberagaman kehidupan
+                                    dan kestabilan ekosistem.
+                                </p>
+                            </div>
+                        </div>
+
+                         <div class="role-item">
+                            <span>04</span>
+                            <div>
+                                <h3>Menjaga Keseimbangan Alam</h3>
+                                <p>
+                                    Interaksi antarspesies membantu menjaga
+                                    fungsi habitat dan kelangsungan
+                                    kehidupan berbagai organisme.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+                 <!-- TAB 3: ANCAMAN -->
+            <section class="tab-content" id="ancaman">
+
+                <div class="content-image">
+                    <img src="images/ancamanhewan.jpg"
+                         alt="hewan">
+                </div>
+
+                <div class="content-description">
+
+                    <span class="category">03 / ANCAMAN KEPUNAHAN</span>
+
+                    <h2>Ancaman yang Mengintai Kehidupan Satwa</h2>
+
+                    <p>
+                        Penurunan populasi satwa tidak terjadi begitu saja.
+                        Berbagai aktivitas manusia dan perubahan lingkungan
+                        menyebabkan habitat semakin rusak, sumber makanan
+                        berkurang, serta ruang hidup satwa semakin terbatas.
+                    </p>
+
+                    <div class="threat-list">
+
+                        <div class="threat-item">
+                            <span>01</span>
+                            <div>
+                                <h3>Kerusakan Habitat</h3>
+                                <p>
+                                    Penebangan hutan dan alih fungsi lahan
+                                    menghilangkan tempat tinggal serta
+                                    sumber makanan satwa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="threat-item">
+                            <span>02</span>
+                            <div>
+                                <h3>Perburuan Liar</h3>
+                                <p>
+                                  Perburuan untuk mengambil kulit,
+                                    gading, tanduk, maupun bagian tubuh
+                                    lainnya mengancam kelangsungan hidup
+                                    berbagai spesies.
+                                </p>
+                            </div>
+                        </div>
+
+
+                    <div class="threat-item">
+                        <span>03</span>
+                        <div>
+                            <h3>Perdagangan Satwa Ilegal</h3>
+
+                            <p>
+                                Penangkapan dan perdagangan satwa
+                                secara ilegal menyebabkan populasi
+                                di alam semakin berkurang.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+              <!-- TAB INDICATOR -->
+            <div class="tab-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="information-footer">
+                <p>
+                    RE:EARTH — Protect What Still Remains.
+                </p>
+            </footer>
+
+      </main>
+    </div>
+
+        
+
+    <!-- JAVASCRIPT TAB -->
+    <script>
+   
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tabs = document.querySelectorAll(".tab-button");
+    const slider = document.querySelector(".tab-slider");
+    const contents = document.querySelectorAll(".tab-content");
+    const dots = document.querySelectorAll(".dot");
+
+    let currentIndex = 0;
+
+    tabs.forEach((tab, index) => {
+
+        tab.addEventListener("click", function () {
+
+            // Jangan geser jika tab yang diklik sudah aktif
+            if (index === currentIndex) return;
+
+            // Geser seluruh slider secara horizontal
+            slider.style.transform =
+                `translateX(-${index * 100}%)`;
+
+            // Ubah tombol aktif
+            tabs.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            // Ubah indikator
+            dots.forEach(dot => {
+                dot.classList.remove("active");
+            });
+
+            if (dots[index]) {
+                dots[index].classList.add("active");
+            }
+
+            // Tandai konten yang sedang ditampilkan
+            contents.forEach(content => {
+                content.classList.remove("active");
+            });
+
+            contents[index].classList.add("active");
+
+            currentIndex = index;
+
+        });
+
+    });
+
+});
+
+
+    </script>
+
+ </body>
+ </html>

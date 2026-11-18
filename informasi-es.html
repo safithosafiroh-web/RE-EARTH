@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum RE:EARTH | Welcome </title>
+
+       <!-- Google Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="informasi-es.css">
+</head>
+
+
+<script>
+document.addEventListener("click", function(event) {
+    const link = event.target.closest("a[href]");
+
+    if (!link) return;
+
+    if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.metaKey ||
+        link.target === "_blank"
+    ) return;
+
+    const destination = new URL(link.href, location.href);
+
+    if (destination.origin !== location.origin) return;
+
+    if (
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+    ) return;
+
+    event.preventDefault();
+
+    if (document.documentElement.classList.contains("page-leaving")) return;
+
+    document.documentElement.classList.add("page-leaving");
+
+    setTimeout(function() {
+        window.location.href = destination.href;
+    }, 850);
+});
+</script>
+
+<body>
+    
+
+    <!--Navbar-->
+      <nav class="navbar">
+        <a href="index.html" class="logo">RE:EARTH</a>
+       
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="museum-container">
+      <!--MAIN CONTENT-->
+
+      <main class="information-section">
+
+        <!--BACK BUTTON-->
+
+        <a href="alur-gallery2.html" class="back-button">  ← Kembali</a>
+
+        <!--TITLE-->
+
+        <header class="information-header">
+
+            <div class="title-icon">ⓘ</div>
+
+            <h1>Informasi Penting</h1>
+            <p>KJelajahi keajaiban Antartika, pahami peran
+                 es bagi keseimbangan bumi, dan kenali ancaman perubahan iklim terhadap kehidupan di kutub
+            </p>
+        </header>
+
+        <!--TAB NAVIGASI-->
+
+       <div class="information-tabs">
+
+       <button class="tab-button active" data-tab="tentang">
+        Tentang Terumbu Karang
+       </button>
+
+       <button class="tab-button" data-tab="peran">
+        Peran Penting
+       </button>
+
+      <button class="tab-button" data-tab="ancaman">
+        Ancaman
+      </button>
+
+      </div>
+
+      <div class="tab-viewport">
+    <div class="tab-slider">
+
+        <!-- TAB 1: TENTANG -->
+            <section class="tab-content " id="tentang">
+
+                <div class="content-image">
+                    <img src="images/05284e894e529344150eee51a18fcde2.jpg"
+                         alt="Keindahan kutub">
+                </div>
+
+                <div class="content-description">
+
+                    <span class="category">01 / MENGENAL EKOSISTEM</span>
+
+                    <h2>Apa Itu Ekosistem Kutub?</h2>
+
+                    <p>
+                         Ekosistem kutub merupakan lingkungan alam yang berada di sekitar Kutub Utara (Arktik) dan 
+                        Kutub Selatan (Antarktika). Wilayah ini dikenal memiliki suhu sangat dingin,
+                        hamparan es, gletser, serta lautan yang menjadi habitat berbagai makhluk hidup.
+                    </p>
+
+                    <p>
+                        Hewan seperti beruang kutub, penguin, anjing laut, dan berbagai organisme laut bergantung pada kondisi
+                        lingkungan kutub untuk bertahan hidup.
+                        Ekosistem ini memiliki peran penting dalam menjaga keseimbangan alam dan iklim bumi.
+                    </p>
+
+                    <div class="fact-box">
+                        <span>TAHUKAH KAMU?</span>
+                        <p>
+                            Es laut bukan hanya hamparan es biasa. 
+                            Es tersebut menjadi tempat hidup, mencari makan, dan
+                            beristirahat bagi sejumlah satwa kutub.
+                      
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+              <!-- TAB 2: PERAN -->
+            <section class="tab-content" id="peran">
+
+                <div class="content-image">
+                    <img src="images/peranes.jpg"
+                         alt="Ekosistem ">
+                </div>
+
+                <div class="content-description">
+
+                    <span class="category">02 / FUNGSI EKOSISTEM</span>
+
+                    <h2>Mengapa Wilayah Kutub Penting?</h2>
+                    <p>
+                        Wilayah kutub memiliki pengaruh besar terhadap sistem iklim bumi.
+                        Keberadaan es dan lautan di sekitarnya membantu mengatur suhu, memengaruhi sirkulasi laut,
+                        serta menyediakan habitat bagi berbagai organisme.
+                    </p>
+
+                    <div class="role-list">
+
+                        <div class="role-item">
+                            <span>01</span>
+                            <div>
+                                <h3>Mengatur suhu bumi</h3>
+                                <p>
+                                     Permukaan es memantulkan sebagian energi matahari kembali ke atmosfer dan 
+                                    angkasa sehingga membantu menjaga keseimbangan suhu bumi.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="role-item">
+                            <span>02</span>
+                            <div>
+                                <h3>Habitat Satwa Kutub</h3>
+                                <p>
+                                    Es laut menjadi tempat mencari
+                                    makan, beristirahat, dan
+                                    berkembang biak bagi berbagai
+                                    satwa kutub.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="role-item">
+                            <span>03</span>
+                            <div>
+                                <h3>Menjaga Keseimbangan Laut</h3>
+                                <p>
+                                    Proses pembentukan dan pencairan
+                                    es laut memengaruhi sirkulasi
+                                    air laut dan sistem iklim global.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+                 <!-- TAB 3: ANCAMAN -->
+            <section class="tab-content" id="ancaman">
+
+                <div class="content-image">
+                    <img src="images/ancamanes.jpg"
+                         alt="kutub">
+                </div>
+
+                <div class="content-description">
+
+                    <span class="category">03 / TANTANGAN LINGKUNGAN</span>
+
+                    <h2>Apa yang Mengancam Ekosistem Kutub?</h2>
+
+                    <p>
+                        Ekosistem kutub menghadapi ancaman akibat
+                        perubahan iklim dan meningkatnya suhu bumi.
+                        Kondisi ini menyebabkan berkurangnya es
+                        dan mengubah habitat berbagai satwa kutub.
+                    </p>
+
+                    <div class="threat-list">
+
+                        <div class="threat-item">
+                            <span>01</span>
+                            <div>
+                                <h3>Pencairan Lapisan Es</h3>
+                                <p>
+                                    Peningkatan suhu menyebabkan es dan
+                                    gletser mencair. Kondisi ini dapat
+                                    berkontribusi terhadap kenaikan
+                                    permukaan air laut.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="threat-item">
+                            <span>02</span>
+                            <div>
+                                <h3>Perubahan Iklim</h3>
+                                <p>
+                                   Perubahan suhu dan kondisi laut
+                                   dapat mengganggu rantai makanan
+                                   serta keseimbangan ekosistem
+                                   Antartika.
+                                </p>
+                            </div>
+                        </div>
+
+
+                    <div class="threat-item">
+                        <span>03</span>
+                        <div>
+                            <h3>Ancaman bagi Satwa Kutub</h3>
+
+                            <p>
+                                Berkurangnya es laut dapat
+                                menghilangkan tempat berburu,
+                                berkembang biak, dan berlindung
+                                bagi satwa seperti penguin dan
+                                anjing laut.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+              <!-- TAB INDICATOR -->
+            <div class="tab-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="information-footer">
+                <p>
+                    RE:EARTH — Protect What Still Remains.
+                </p>
+            </footer>
+
+      </main>
+    </div>
+
+        
+
+    <!-- JAVASCRIPT TAB -->
+    <script>
+   
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tabs = document.querySelectorAll(".tab-button");
+    const slider = document.querySelector(".tab-slider");
+    const contents = document.querySelectorAll(".tab-content");
+    const dots = document.querySelectorAll(".dot");
+
+    let currentIndex = 0;
+
+    tabs.forEach((tab, index) => {
+
+        tab.addEventListener("click", function () {
+
+            // Jangan geser jika tab yang diklik sudah aktif
+            if (index === currentIndex) return;
+
+            // Geser seluruh slider secara horizontal
+            slider.style.transform =
+                `translateX(-${index * 100}%)`;
+
+            // Ubah tombol aktif
+            tabs.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            // Ubah indikator
+            dots.forEach(dot => {
+                dot.classList.remove("active");
+            });
+
+            if (dots[index]) {
+                dots[index].classList.add("active");
+            }
+
+            // Tandai konten yang sedang ditampilkan
+            contents.forEach(content => {
+                content.classList.remove("active");
+            });
+
+            contents[index].classList.add("active");
+
+            currentIndex = index;
+
+        });
+
+    });
+
+});
+
+
+    </script>
+
+ </body>
+ </html>

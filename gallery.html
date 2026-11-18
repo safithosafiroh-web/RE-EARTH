@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum RE:EARTH | Welcome </title>
+
+       <!-- Google Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="gallery.css">
+</head>
+
+
+<script>
+document.addEventListener("click", function(event) {
+    const link = event.target.closest("a[href]");
+
+    if (!link) return;
+
+    if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.metaKey ||
+        link.target === "_blank"
+    ) return;
+
+    const destination = new URL(link.href, location.href);
+
+    if (destination.origin !== location.origin) return;
+
+    if (
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+    ) return;
+
+    event.preventDefault();
+
+    if (document.documentElement.classList.contains("page-leaving")) return;
+
+    document.documentElement.classList.add("page-leaving");
+
+    setTimeout(function() {
+        window.location.href = destination.href;
+    }, 850);
+});
+</script>
+
+<body>
+
+    <!--Navbar-->
+      <nav class="navbar">
+        <a href="index.html" class="logo">RE:EARTH</a>
+       
+      </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <main class="gallery-container">
+
+        <div class="gallery-intro">
+            <h1>Memories of Earth</h1>
+            <p>
+                Menjelajahi keindahan  alam yang mungkin hanya
+                menjadi kenangan di masa depan
+            </p>
+        </div>
+
+        <!--GALLERY CARDS-->
+
+        <section class="gallery-grid">
+
+
+            <div class="gallery-card card-sea">
+                <div class="card-content">
+                    <h3>DUNIA LAUT YANG PUNAH</h3>
+                    <p>Menjelajahi keindahan ekosistem laut,
+                        terumbu karang,dan kehidupan samudra
+                        yang semaakin terancam.
+                    </p>
+                    <a href="alur-gallery.html" class="card-button">Masuk Galeri</a>
+                </div>
+            </div>
+
+            <div class="gallery-card card-forest">
+                <div class="card-content">
+                    <h3>HUTAN YANG HILANG</h3>
+                    <p>Melihat dampak deforestasi hilangnya
+                        habitat, dan kerusakan ekosistem hutan
+                    </p>
+                    <a href="alur-gallery1.html" class="card-button">Masuk Galeri</a>
+                </div>
+            </div>
+
+            <div class="gallery-card card-ice">
+                <div class="card-content">
+                    <h3>DUNIA ES YANG MENCAIR</h3>
+                    <p>Mengenal perubahan iklim,pencairan es,
+                        dan ancaman bagi kehidupan kutub.
+                    </p>
+                    <a href="alur-gallery2.html" class="card-button">Masuk Galeri</a>
+                </div>
+            </div>
+
+            <div class="gallery-card card-wildlife">
+                <div class="card-content">
+                    <h3>KEHIDUPAN YANG HILANG</h3>
+
+                    <p>Mengenal hewan-hewan yang telah punah,
+                        penyebab kepunahannya, dan ancaman terhadap 
+                        keanekaragaman hayati. 
+                    </p>
+                    <a href="alur-gallery3.html" class="card-button">Masuk Galeri</a>
+                </div>
+            </div>
+
+        </section>
+
+        </main>
+
+</body>
+</html>
+       

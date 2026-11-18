@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RE:EARTH | Welcome </title>
+
+       <!-- Google Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+ <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="preload" as="image" href="images/photo_2026-11-15_11-19-27.jpg">
+
+
+<link rel="stylesheet" href="about.css">
+
+</head>
+
+
+<script>
+document.addEventListener("click", function(event) {
+    const link = event.target.closest("a[href]");
+
+    if (!link) return;
+
+    if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.metaKey ||
+        link.target === "_blank"
+    ) return;
+
+    const destination = new URL(link.href, location.href);
+
+    if (destination.origin !== location.origin) return;
+
+    if (
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+    ) return;
+
+    event.preventDefault();
+
+    if (document.documentElement.classList.contains("page-leaving")) return;
+
+    document.documentElement.classList.add("page-leaving");
+
+    setTimeout(function() {
+        window.location.href = destination.href;
+    }, 850);
+});
+</script>
+
+<body> 
+     <!--Navbar-->
+      <nav class="navbar">
+      <a href="index.html" class="logo">RE:EARTH</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a> </li>
+            <li> <a href="about.html" class="active">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      
+      <!--HERO-->
+      <header class="about-hero">
+        <div class="hero-text">
+            <span class="hero-label">THE STORY BEHIND RE:EARTH</span>
+            <h1>WHAT WILL WE <br>
+                LEAVE BEHIND?</h1>
+
+            <p>
+                Every action creates a consequence.
+                Every choice shapes the future.
+            </p>
+            <div class="hero-line"></div>
+        </div>
+
+        <div class="hero-description">
+            <Span class="description-label"></Span>
+            <h3>RE:EARTH</h3>
+
+            <p>
+                RE:EARTH adalah museum digital interaktif 
+                yang mengajak pengunjung menyelami perjalanan 
+                sampah, damapak aktivitas manusia terhadap lingkungan,
+                dan bagaimana keputusan kita hari ini menentukan 
+                kondisi bumi dimasa depan.         
+             </p>
+
+             <span class="description-footer">
+                 EXPLORE. UNDESRTAND. TAKE ACTION.</span>
+        </div>
+      </header>
+
+
+<!-- OUR STORY -->
+<section class="story-section">
+
+    <div class="section-intro">
+        <span class="section-label">OUR STORY</span>
+        <h2>A Journey Of Awareness</h2>
+        <p>
+            Dari masalah hingga solusi, setiap langkah membawa
+            kita lebih dekat pada bumi yang lebih baik.
+        </p>
+    </div>
+
+    <div class="story-timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="timeline-content">
+                <span class="timeline-number">01</span>
+                <h3>THE PROBLEM</h3>
+                <p>Sampah dan aktivitas manusia memberikan tekanan besar pada lingkungan.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+            <div class="timeline-content">
+                <span class="timeline-number">02</span>
+                <h3>THE AWARENESS</h3>
+                <p>Saatnya kita sadar akan dampak dari setiap tindakan.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fa-solid fa-desktop"></i>
+            </div>
+            <div class="timeline-content">
+                <span class="timeline-number">03</span>
+                <h3>THE EXPERIENCE</h3>
+                <p>Jelajahi museum dan lihat langsung akibatnya.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="timeline-content">
+                <span class="timeline-number">04</span>
+                <h3>THE FUTURE</h3>
+                <p>Bersama, kita bisa menciptakan masa depan yang lebih hijau.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+        
+<!-- OUR PURPOSE -->
+<section class="purpose-section">
+
+    <div class="section-intro">
+        <span class="section-label">OUR PURPOSE</span>
+        <h2>A Greener Tomorrow</h2>
+        <p>
+            Kami hadir dengan tujuan mulia: membangun kesadaran
+            dan menginspirasi aksi nyata untuk bumi.
+        </p>
+    </div>
+
+    <div class="purpose-cards">
+
+        <div class="purpose-card">
+            <div class="purpose-visual">
+                <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <div class="purpose-text">
+                <h3>OUR VISION</h3>
+                <p>
+                    Membangun kesadaran lingkungan melalui
+                    pengalaman digital yang interaktif, edukatif,
+                    dan bermakna.
+                </p>
+            </div>
+        </div>
+
+        <div class="purpose-card">
+            <div class="purpose-visual">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div class="purpose-text">
+                <h3>OUR MISSION</h3>
+                <p>
+                    Mengajak masyarakat memahami dampak kehidupan
+                    manusia dan mendorong kebiasaan yang lebih
+                    bertanggung jawab terhadap bumi.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- WHAT MAKES US DIFFERENT -->
+<section class="different-section">
+
+    <div class="section-intro">
+        <span class="section-label">OUR DIFFERENCE</span>
+        <h2>More Than A Museum.</h2>
+        <p>
+            Pengalaman interaktif yang mengubah cara kita
+            melihat dan merasakan dampak lingkungan.
+        </p>
+    </div>
+
+    <div class="different-grid">
+
+        <div class="different-item">
+            <i class="fa-solid fa-vr-cardboard"></i>
+            <div>
+                <h3>Immersive Experience</h3>
+                <p>Menjelajahi museum dengan pengalaman visual digital.</p>
+            </div>
+        </div>
+
+        <div class="different-item">
+            <i class="fa-solid fa-gamepad"></i>
+            <div>
+                <h3>Branching Mission</h3>
+                <p>Pilih jalan cerita dan tentukan dampaknya.</p>
+            </div>
+        </div>
+
+        <div class="different-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <div>
+                <h3>Real Consequences</h3>
+                <p>Lihat akibat dari setiap keputusanmu.</p>
+            </div>
+        </div>
+
+        <div class="different-item">
+            <i class="fa-solid fa-leaf"></i>
+            <div>
+                <h3>Environmental Learning</h3>
+                <p>Belajar untuk peduli dan melangkah lebih baik.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+      <!--OUR FUTURE-->
+      <section class="future-section">
+
+        <span class="section-label">THE FUTURE</span>
+
+        <h2>The Future Is In Our Hand</h2>
+
+        <p>
+            Selanjutnya dari perjalanan ini, harus dimulai dari dirimu
+        </p>
+
+       <a href="gallery.html" class="explore-button">
+        EXPLORE THE MUSEUM
+        <i class="fa-solid fa-arrow-right"></i>
+       </a>
+      </section>
+
+    
+</body>
+</html>

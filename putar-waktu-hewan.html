@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum RE:EARTH | Welcome </title>
+
+       <!-- Google Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="putar-waktu-hewan.css">
+</head>
+
+
+<script>
+document.addEventListener("click", function(event) {
+    const link = event.target.closest("a[href]");
+
+    if (!link) return;
+
+    if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.metaKey ||
+        link.target === "_blank"
+    ) return;
+
+    const destination = new URL(link.href, location.href);
+
+    if (destination.origin !== location.origin) return;
+
+    if (
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+    ) return;
+
+    event.preventDefault();
+
+    if (document.documentElement.classList.contains("page-leaving")) return;
+
+    document.documentElement.classList.add("page-leaving");
+
+    setTimeout(function() {
+        window.location.href = destination.href;
+    }, 850);
+});
+</script>
+
+<body>
+    
+  <main class="museum">
+
+    <!--Navbar-->
+      <nav class="navbar">
+        <a href="index.html" class="logo">RE:EARTH</a>
+       
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+      </nav>
+
+       <!-- CONTENT -->
+        <section class="time-section">
+
+            <!-- BACK -->
+            <a href="alur-gallery3.html" class="back-button">
+                ← Kembali 
+            </a>
+
+
+            <!-- TITLE -->
+            <header class="time-header">
+
+                <div class="hourglass">⌛️</div>
+
+                <h1>Putar Waktu</h1>
+
+                <p>
+                    Lihat bagaimana kehidupan satwa terancam punah
+                    dapat berubah dari kondisi hari ini menuju tahun 2100.
+                </p>
+
+            </header>
+
+
+            <!-- COMPARISON SLIDER -->
+            <div class="comparison-container" id="comparison">
+
+                <!-- GAMBAR TAHUN 2100 -->
+                <div class="comparison-image">
+                    <img src="images/backgroundgalerihewan.jpg"
+                         alt="hutan rusak tahun 2100">
+                </div>
+
+
+                <!-- GAMBAR HARI INI -->
+                <div class="comparison-overlay" id="overlay">
+
+                    <img src="images/ancamanhewan.jpg"
+                         alt="hutan sehat hari ini">
+
+                </div>
+
+
+                <!-- LABEL TAHUN 2100 -->
+                <div class="image-label label-left">
+
+                    <h3>Tahun 2100</h3>
+
+                    <p>Populasi semakin terancam</p>
+
+                </div>
+
+
+                <!-- LABEL HARI INI -->
+                <div class="image-label label-right">
+
+                    <h3>Hari Ini</h3>
+
+                    <p>Masih bisa diselamatkan</p>
+
+                </div>
+
+
+                <!-- GARIS PEMBANDING -->
+                <div class="comparison-divider" id="divider">
+
+                    <div class="slider-handle">
+                        ‹ ›
+                    </div>
+
+                </div>
+
+
+                <!-- INPUT SLIDER -->
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    id="comparisonRange"
+                    aria-label="Geser untuk membandingkan kondisi">
+
+            </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                MUSEUM 2100 — Protect What Still Remains.
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.getElementById("comparisonRange");
+
+    const overlay = document.getElementById("overlay");
+
+    const divider = document.getElementById("divider");
+
+
+    function updateComparison() {
+
+        const value = slider.value;
+
+        // Mengubah lebar gambar Hari Ini
+        overlay.style.width = value + "%";
+
+        // Menggeser garis pembatas
+        divider.style.left = value + "%";
+
+    }
+
+
+    // Saat slider digeser
+    slider.addEventListener("input", updateComparison);
+
+
+    // Tampilan awal
+    updateComparison();
+
+});
+
+    </script>
+
+</main> 
+
+</body>
+</html>

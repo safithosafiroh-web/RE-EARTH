@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum RE:EARTH | Welcome </title>
+
+       <!-- Google Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="alur-gallery3.css">
+</head>
+
+
+<script>
+document.addEventListener("click", function(event) {
+    const link = event.target.closest("a[href]");
+
+    if (!link) return;
+
+    if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.metaKey ||
+        link.target === "_blank"
+    ) return;
+
+    const destination = new URL(link.href, location.href);
+
+    if (destination.origin !== location.origin) return;
+
+    if (
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+    ) return;
+
+    event.preventDefault();
+
+    if (document.documentElement.classList.contains("page-leaving")) return;
+
+    document.documentElement.classList.add("page-leaving");
+
+    setTimeout(function() {
+        window.location.href = destination.href;
+    }, 850);
+});
+</script>
+
+<body>
+
+  <main class="museum">
+
+    <nav class="navbar">
+      <a href="index.html" class="logo">RE:EARTH</a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
+      </div>
+    </nav>
+
+    <header class="gallery-header">
+      <h1>Ruang Galeri</h1>
+      <p>Jelajahi, bandingkan, dan temukan aksi nyata<br>
+      untuk menyelamatkan alam.</p>
+    </header>
+
+    
+<section class="gallery-cards">
+
+    <!-- CARD 1: INFORMASI PENTING -->
+    <a href="informasi-hewan.html" class="gallery-card blue">
+
+        <div class="card-icon">ⓘ</div>
+
+        <h2>Informasi<br>Penting</h2>
+
+        <img src="images/rumahhutan.jpg" alt="Terumbu Karang">
+
+    </a>
+
+
+    <!-- CARD 2: PUTAR WAKTU -->
+    <a href="putar-waktu-hewan.html" class="gallery-card cyan">
+
+        <div class="card-icon">⌛️</div>
+
+        <h2>Putar<br>Waktu</h2>
+
+        <img src="images/0ea810cc481ba8f5bb8f78f53529da1f.jpg" alt="Perubahan kondisi laut">
+        
+
+    </a>
+
+
+    <!-- CARD 3: AKSI KITA -->
+    <a href="aksi-hewan.html" class="gallery-card green">
+
+        <div class="card-icon">🌱</div>
+
+        <h2>Aksi<br>Kita</h2>
+
+        <img src="images/aksihewan.jpg" alt="Aksi pelestarian lingkungan">
+
+    </a>
+
+</section>
+
+    </section>
+
+    <div class="floor-glow"></div>
+
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="close" onclick="tutupPanel()">×</button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+</body>
+</html>

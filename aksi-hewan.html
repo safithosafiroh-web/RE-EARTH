@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum RE:EARTH | Welcome </title>
+
+       <!-- Google Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="aksi-hewan.css">
+</head>
+
+
+<script>
+document.addEventListener("click", function(event) {
+    const link = event.target.closest("a[href]");
+
+    if (!link) return;
+
+    if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.metaKey ||
+        link.target === "_blank"
+    ) return;
+
+    const destination = new URL(link.href, location.href);
+
+    if (destination.origin !== location.origin) return;
+
+    if (
+        destination.pathname === location.pathname &&
+        destination.search === location.search
+    ) return;
+
+    event.preventDefault();
+
+    if (document.documentElement.classList.contains("page-leaving")) return;
+
+    document.documentElement.classList.add("page-leaving");
+
+    setTimeout(function() {
+        window.location.href = destination.href;
+    }, 850);
+});
+</script>
+
+<body>
+    
+<div class="aksi-container">
+
+    <!--Navbar-->
+      <nav class="navbar">
+        <a href="index.html" class="logo">RE:EARTH</a>
+       
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="museum-container">
+
+        <!--KEMBALI-->
+
+        <a href="alur-gallery3.html" class="back-link">  ← Kembali</a>
+
+        <!--JUDUL HALAMAN-->
+
+        <header class="page-header">
+            <div class="leaf-icon">🐾</div>
+
+            <h1>Aksi Kita</h1>
+
+            <div class="tagline">
+                FROM PROMISE TO ACTION
+            </div>
+
+            <p>
+                Setiap satwa memiliki hak untuk hidup dan bertahan.
+                <br>
+                Saatnya mengambil langkah nyata untuk melindungi
+                mereka dari ancaman kepunahan.
+            </p>
+
+        </header>
+
+        <!--INDIKATOR TAHAP-->
+
+        <div class="step-indicator">
+         <div class="indicator active" id="indicator1">
+            <span>1</span>
+            <p>Pilih Misi</p>
+        </div>
+
+        <div class="indicator-line"></div>
+
+        <div class="indicator" id="indicator2">
+            <span>2</span>
+            <p>Tantangan</p>
+        </div>
+
+        <div class="indicator-line"></div>
+
+        <div class="indicator" id="indicator3">
+            <span>3</span>
+            <p>Refleksi</p>
+        </div>
+        </div>
+
+        <!--TAHAP 1: PILIH MISI-->
+
+         <section id="step1" class="step active">
+
+        <div class="section-heading">
+            <h2>Misi Penjaga Satwa</h2>
+            <p>ilih satu aksi untuk membantu melindungi satwa terancam punah.</p>
+        </div>
+
+
+        <div class="mission-grid">
+
+            <label class="mission-card">
+
+                <input type="radio" name="mission"
+                       value="plastic">
+
+                <div class="mission-icon">🐅</div>
+
+                <div class="mission-info">
+                    <h3>Wildlife Protector</h3>
+                    <p>
+                         Mengenali dan menyebarkan informasi
+                    tentang satwa yang terancam punah.
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+ 
+            <label class="mission-card">
+
+                <input type="radio" name="mission"
+                       value="ocean">
+
+                <div class="mission-icon">🌳</div>
+
+                <div class="mission-info">
+                    <h3>Habitat Guardian</h3>
+                    <p>
+                        Menjaga lingkungan alami agar satwa
+                        memiliki tempat hidup yang aman.
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+
+
+            <label class="mission-card">
+
+                <input type="radio" name="mission"
+                       value="marine">
+
+                <div class="mission-icon">🛡️</div>
+
+                <div class="mission-info">
+                    <h3>Anti-Poaching Hero</h3>
+                    <p>
+                        Menolak perburuan dan perdagangan
+                        satwa liar yang dilindungi.
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+
+
+            <label class="mission-card">
+
+                <input type="radio" name="mission"
+                       value="earth">
+
+                <div class="mission-icon">🌍</div>
+
+                <div class="mission-info">
+                    <h3>Wildlife Educator</h3>
+                    <p>
+                       Mengajak orang lain peduli dan ikut
+                       melindungi satwa terancam punah. 
+                    </p>
+                </div>
+
+                <span class="mission-check">✓</span>
+
+            </label>
+
+        </div>
+
+
+        <div class="step-footer">
+
+            <p id="select-message">
+                Pilih satu misi untuk melanjutkan.
+            </p>
+
+            <button class="primary-btn" onclick="mulaiMisi()">
+                Mulai Tantangan →
+            </button>
+
+        </div>
+
+    </section>
+
+    <!--TAHAP 2:TANTANGAN MISI-->
+
+     <section id="step2" class="step">
+
+        <div class="section-heading">
+            <h2>Tantangan Nyata</h2>
+            <p>
+                Satu tindakan nyata dapat menjadi langkah
+                penting untuk melindungi kehidupan satwa.
+            </p>
+        </div>
+
+
+        <div class="challenge-card">
+
+            <div class="challenge-image">
+                <img id="mission-image"
+                     src="images/aksihewan.jpg"
+                     alt="Ilustrasi pelestarian hutan">
+            </div>
+
+
+            <div class="challenge-content">
+
+                <span class="mission-label" id="mission-label">
+                    MISI 1
+                </span>
+
+                <h2 id="mission-title">
+                      Wildlife Protector
+                </h2>
+
+                <p id="mission-description">
+                     Melindungi satwa terancam punah.
+                </p>
+
+
+                <div class="challenge-box">
+
+                    <h3>🎯 Tantangan Nyata</h3>
+
+                    <p id="challenge-text">
+                        Pelajari satu jenis satwa terancam punah
+                        dan bagikan informasi tentangnya.
+                    </p>
+
+                </div>
+
+
+                <div class="challenge-note">
+                    <span>💡</span>
+                    <p>
+                        Perlindungan satwa dimulai dari kepedulian.
+                        Jadikan tindakan sederhana sebagai bagian
+                        dari perubahan nyata.
+                    </p>
+                </div>
+
+
+                <div class="challenge-buttons">
+
+                    <button class="primary-btn"
+                            onclick="sudahMelakukan()">
+                        ✓ Saya Sudah Melakukannya
+                    </button>
+
+                    <button class="secondary-btn"
+                            onclick="belumMelakukan()">
+                        Belum, Nanti Saya Coba
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="back-step-btn" onclick="keTahap(1)">
+            ← Kembali Pilih Misi
+        </button>
+
+    </section>
+
+    <!--TAHAP 3:RELEKSI-->
+
+    <section id="step3" class="step">
+
+        <div class="section-heading">
+
+            <h2>Bagikan Pengalamanmu</h2>
+
+            <p>
+                Ceritakan bagaimana kamu ikut mengambil bagian
+                dalam melindungi satwa yang terancam punah.
+            </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+            <!-- UPLOAD FOTO -->
+            <div class="upload-area">
+
+                <label for="photo-upload" class="upload-label">
+
+                    <span class="upload-icon">📷</span>
+
+                    <h3>Unggah Foto</h3>
+
+                    <p>Dokumentasikan aksimu (Opsional)</p>
+
+                    <span class="upload-plus">+</span>
+
+                </label>
+
+                <input type="file"
+                       id="photo-upload"
+                       accept="image/*"
+                       hidden>
+
+                <img id="photo-preview" alt="Preview foto">
+
+            </div>
+
+
+            <!-- FORM REFLEKSI -->
+            <div class="reflection-form">
+
+                <label for="pengalaman">
+                    Ceritakan Pengalamanmu
+                </label>
+              <textarea
+                    id="pengalaman"
+                    maxlength="300"
+                    placeholder="Contoh: Hari ini saya membawa tumbler ke kampus dan berhasil mengurangi penggunaan botol plastik..."
+                ></textarea>
+
+                <div class="character-count">
+                    <span id="char-count">0</span>/300
+                </div>
+
+
+                <div class="reflection-reminder">
+                    🐾 Setiap kepedulian dapat menjadi
+                awal perlindungan bagi kehidupan satwa.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="reflection-buttons">
+
+            <button class="secondary-btn"
+                    onclick="keTahap(2)">
+                ← Kembali
+            </button>
+
+            <button class="primary-btn"
+                    onclick="kirimRefleksi()">
+                ✓ Kirim Refleksi
+            </button>
+
+        </div>
+
+    </section>
+  
+    <!--HASIL PENGHARGAAN-->
+
+     <section id="success" class="step">
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                🏆
+            </div>
+
+            <span class="success-label">
+                MISSION COMPLETED
+            </span>
+
+            <h1>Selamat!</h1>
+
+            <h2>Wildlife Protector</h2>
+
+            <p id="success-mission">
+                Kamu telah menyelesaikan tantanganmu.
+            </p>
+
+            <div class="badge-stars">
+                ⭐️ ⭐️ ⭐️
+            </div>
+
+            <p class="success-message">
+                Terima kasih telah mengambil langkah
+                untuk menjaga kelestarian bumi.
+                Masa depan bumi dimulai dari tindakanmu hari ini.
+            </p>
+
+            <button class="primary-btn"
+                    onclick="ulangMisi()">
+                Pilih Misi Lain →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© RE:EARTH — THE FUTURE IS IN OUR HANDS</p>
+    </footer>
+
+</div>
+
+<script>
+   /* DATA MISI */
+
+const missions = {
+
+    plastic: {
+        label: "MISI 1",
+        title: "Wildlife Protector",
+        description: "Kenali satwa terancam punah dan bantu sebarkan kesadaran tentang keberadaan mereka.",
+        challenge: "Pilih satu satwa terancam punah di Indonesia, misalnya harimau Sumatra, orangutan, atau badak Jawa. Cari tahu kondisi populasinya dan ancaman yang dihadapinya. Kemudian bagikan informasi tersebut kepada teman atau keluarga.",
+        image: "images/5e5dc2ea8da5ad73792a27a016068fc6.jpg"
+    },
+
+      ocean: {
+        label: "MISI 2",
+        title: "Habitat Guardian",
+        description: "Bantu menjaga lingkungan agar satwa tetap memiliki tempat hidup yang aman.",
+        challenge: "Lakukan satu aksi untuk menjaga lingkungan sekitar, seperti mengurangi sampah plastik, tidak membuang sampah sembarangan, atau ikut kegiatan bersih lingkungan. Lingkungan yang terjaga membantu mendukung kehidupan berbagai makhluk hidup.",
+        image: "images/rumahhutan.jpg"
+    },
+
+     marine: {
+        label: "MISI 3",
+         title: "Anti-Poaching Hero",
+        description: "Tolak perburuan dan perdagangan satwa liar yang mengancam kelangsungan hidup mereka.",
+        challenge: "Pelajari mengapa perburuan dan perdagangan satwa liar ilegal dapat menyebabkan kepunahan. Jangan membeli produk yang berasal dari satwa dilindungi dan laporkan dugaan perdagangan satwa ilegal melalui saluran resmi yang berwenang.",
+        image: "images/satwahutan.jpg"
+    },
+
+    earth: {
+        label: "MISI 4",
+         title: "Wildlife Educator",
+        description: "Sebarkan pengetahuan dan ajak orang lain ikut melindungi satwa terancam punah.",
+        challenge: "Buat satu unggahan sederhana, poster, atau cerita tentang satwa terancam punah. Sertakan fakta tentang ancaman yang mereka hadapi dan ajak orang lain untuk ikut menjaga kelestariannya.",
+        image: "images/edukasisatwa.jpg"
+    }
+
+
+};
+
+
+// Menyimpan misi yang dipilih
+let selectedMission = null;
+
+
+/* PINDAH TAHAP */
+
+function keTahap(nomor) {
+
+    document.querySelectorAll(".step").forEach(step => {
+        step.classList.remove("active");
+    });
+
+    document.getElementById("step" + nomor)
+        .classList.add("active");
+
+    updateIndicator(nomor);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* INDIKATOR TAHAP */
+
+function updateIndicator(nomor) {
+
+    for (let i = 1; i <= 3; i++) {
+
+        const indicator = document.getElementById(
+            "indicator" + i
+        );
+
+        indicator.classList.remove("active", "done");
+
+        if (i < nomor) {
+            indicator.classList.add("done");
+        }
+
+        if (i === nomor) {
+            indicator.classList.add("active");
+        }
+
+    }
+
+}
+
+
+/* TAHAP 1 : PILIH MISI */
+
+function mulaiMisi() {
+
+    const pilihan = document.querySelector(
+        'input[name="mission"]:checked'
+    );
+
+    const message = document.getElementById("select-message");
+
+    // Cek apakah misi sudah dipilih
+    if (!pilihan) {
+
+        message.textContent =
+            "Silakan pilih satu misi terlebih dahulu!";
+
+        message.style.color = "#ff9a9a";
+
+        return;
+    }
+
+    // Simpan misi
+    selectedMission = pilihan.value;
+
+    const data = missions[selectedMission];
+
+    // Tampilkan data misi
+    document.getElementById("mission-label").textContent =
+        data.label;
+
+    document.getElementById("mission-title").textContent =
+        data.title;
+
+    document.getElementById("mission-description").textContent =
+        data.description;
+
+    document.getElementById("challenge-text").textContent =
+        data.challenge;
+
+    document.getElementById("mission-image").src =
+        data.image;
+
+    document.getElementById("mission-image").alt =
+        data.title;
+
+    // Pindah ke tahap 2
+    keTahap(2);
+
+}
+
+
+/* TAHAP 2 : SUDAH MELAKUKAN */
+
+function sudahMelakukan() {
+
+    // Pengunjung melaporkan bahwa tantangan
+    // sudah dilakukan secara mandiri.
+
+    document.getElementById("pengalaman").value = "";
+
+    document.getElementById("char-count").textContent = "0";
+
+    document.getElementById("photo-upload").value = "";
+
+    document.getElementById("photo-preview").style.display =
+        "none";
+
+    keTahap(3);
+
+} 
+
+/* BELUM MELAKUKAN */
+
+function belumMelakukan() {
+
+    alert(
+        "Tidak masalah! Kamu bisa melakukan tantangan ini kapan saja. Silakan coba lagi saat sudah siap. 🌱"
+    );
+
+    keTahap(1);
+
+}
+
+
+/* TAHAP 3 : HITUNG KARAKTER */
+
+const pengalaman = document.getElementById("pengalaman");
+
+pengalaman.addEventListener("input", function() {
+
+    document.getElementById("char-count").textContent =
+        this.value.length;
+
+});
+
+
+/* UPLOAD FOTO DAN PREVIEW */
+
+const photoUpload = document.getElementById("photo-upload");
+
+photoUpload.addEventListener("change", function() {
+
+    const file = this.files[0];
+
+    if (!file) {
+        return;
+    }
+
+    // Pastikan file berupa gambar
+    if (!file.type.startsWith("image/")) {
+
+        alert("Silakan pilih file gambar!");
+
+        this.value = "";
+
+        return;
+    }
+
+    const preview = document.getElementById("photo-preview");
+
+    const imageURL = URL.createObjectURL(file);
+
+    preview.src = imageURL;
+
+    preview.style.display = "block";
+
+});
+
+
+/* KIRIM REFLEKSI */
+
+function kirimRefleksi() {
+
+    const isiPengalaman =
+        document.getElementById("pengalaman").value.trim();
+
+    // Validasi refleksi
+    if (isiPengalaman.length < 10) {
+
+        alert(
+            "Ceritakan pengalamanmu minimal 10 karakter terlebih dahulu!"
+        );
+
+        return;
+    }
+
+    // Tampilkan nama misi pada halaman penghargaan
+    document.getElementById("success-mission").textContent =
+        "Kamu telah menyelesaikan tantangan " +
+        missions[selectedMission].title +
+        " dan mengirimkan refleksimu.";
+
+    // Tampilkan halaman penghargaan
+    document.querySelectorAll(".step").forEach(step => {
+        step.classList.remove("active");
+    });
+
+    document.getElementById("success").classList.add("active");
+
+    // Semua indikator selesai
+    updateIndicator(4);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ULANG MISI */
+
+function ulangMisi() {
+
+    // Reset pilihan
+    document.querySelectorAll(
+        'input[name="mission"]'
+    ).forEach(input => {
+        input.checked = false;
+    });
+
+    selectedMission = null;
+
+    // Reset refleksi
+    document.getElementById("pengalaman").value = "";
+
+    document.getElementById("char-count").textContent = "0";
+
+    // Reset foto
+    document.getElementById("photo-upload").value = "";
+
+    document.getElementById("photo-preview").style.display =
+        "none";
+
+    // Kembali ke tahap pertama
+    keTahap(1);
+
+}
+</script>
+    
+</body>
+</html>
+
